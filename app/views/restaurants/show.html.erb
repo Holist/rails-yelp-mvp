@@ -1,2 +1,10 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="container">
+    <h1><%= @restaurant.name.upcase %></h1>
+    <p><strong>Address : </strong><%= @restaurant.address %></p>
+    <p><strong>Phone : </strong><%= @restaurant.phone_number %></p>
+    <p><strong>Category : </strong><%= @restaurant.category %></p>
+
+    <% @restaurant.reviews.each do |review| %>
+    <li> <strong>Review :</strong> <%= review.content %>, <strong>Rating :</strong> <%= review.rating %></li>
+    <% end %>
+</div>

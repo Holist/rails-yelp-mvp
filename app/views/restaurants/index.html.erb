@@ -1,2 +1,14 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<div class="container">
+
+  <% @restaurants.each do |restaurant|  %>
+    <div class="card-restaurant">
+      <h3><%= link_to "#{restaurant.name.upcase}", restaurant_path(restaurant) %></h3>
+      <p><strong>Address : </strong><%= restaurant.address %></p>
+      <p><strong> Phone : </strong><%= restaurant.phone_number %></p>
+      <%= link_to "Reviews : #{restaurant.reviews.count}", restaurant_path(restaurant) %>
+    </div>
+  <% end %>
+
+<%= link_to "New restaurant", new_restaurant_path, class: 'btn btn-primary' %>
+
+</div>

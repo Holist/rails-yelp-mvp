@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <%= simple_form_for @restaurant do |f| %>
+        <%= f.input :name, error: 'The name is mandatory, please specify one' %>
+        <%= f.input :address, as: :text, error: 'Address is mandatory, please specify one'  %>
+        <%= f.input :phone_number %>
+        <%= f.input :category, collection: Restaurant::CATEGORIES, hint: 'Choose a category' %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
