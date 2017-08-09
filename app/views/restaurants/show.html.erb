@@ -13,3 +13,13 @@
 </div>
 
 <%= render "reviews/form" %>
+
+
+<!-- MAP OPTION, NE PAS EN TENIR COMPTE -->
+
+<div class="hidden restaurant-address"><%= @restaurant.address %></div>
+
+<div id="map"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
